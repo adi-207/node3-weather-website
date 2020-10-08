@@ -12,7 +12,7 @@ const forecast = (lat, lan ,  callback ) => {
             callback('Unable to find location' , undefined)
         } else {
             
-            callback(undefined, `${body.daily[0].weather[0].description} It is currently ${body.current.temp} degrees out. There wind speed is ${body.current.wind_speed}. max. temp : ${body.daily[0].temp.max} , min. temp: ${body.daily[0].temp.min}`)
+            callback(undefined, `${body.daily[0].weather[0].description} It is currently ${body.current.temp} degrees out. There wind speed is ${body.current.wind_speed}. The high today is ${body.daily[0].temp.max} with a low of ${body.daily[0].temp.min},`)
         }
     })
 }
